@@ -148,4 +148,5 @@ dmypy.json
 # папки со статикой и медиа
 static/
 posts/static/
+sent_emails/
 
