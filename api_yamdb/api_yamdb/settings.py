@@ -11,7 +11,7 @@ SECRET_KEY = config('SECRET_KEY')
 DEBUG = False
 
 ALLOWED_HOSTS = config(
-    'ALLOWED_HOSTS', cast=lambda v: [s.strip() for s in v.split(',')]
+    'ALLOWED_HOSTS', default=['*'], cast=lambda v: [s.strip() for s in v.split(',')]
 )
 # ALLOWED_HOSTS = ['*']
 
