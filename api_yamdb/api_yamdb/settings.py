@@ -1,7 +1,7 @@
 import os
 import datetime
 
-from decouple import config
+from decouple import config, Csv
 
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -11,9 +11,8 @@ SECRET_KEY = config('SECRET_KEY')
 DEBUG = False
 
 ALLOWED_HOSTS = config(
-    'ALLOWED_HOSTS', default=['*'], cast=lambda v: [s.strip() for s in v.split(',')]
+    'ALLOWED_HOSTS', cast=Csv(), default=['*']
 )
-# ALLOWED_HOSTS = ['*']
 
 EMAIL_FROM = 'apiyamdb@example.ru.'
 
