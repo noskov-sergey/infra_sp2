@@ -11,7 +11,7 @@ SECRET_KEY = config('SECRET_KEY')
 DEBUG = False
 
 ALLOWED_HOSTS = config(
-    'ALLOWED_HOSTS', cast=Csv(), default=['*']
+    'ALLOWED_HOSTS', default='*', cast=Csv()
 )
 
 EMAIL_FROM = 'apiyamdb@example.ru.'
